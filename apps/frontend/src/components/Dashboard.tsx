@@ -42,7 +42,6 @@ export function Dashboard() {
   }
 
   const upTimeMetrics = {
-    evicted_scripts: infoData.evicted_scripts,
     uptime_in_seconds: infoData.uptime_in_seconds,
     total_net_input_bytes: infoData.total_net_input_bytes,
     total_net_output_bytes: infoData.total_net_output_bytes,

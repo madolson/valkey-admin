@@ -46,10 +46,6 @@ export const singleMetricDescriptions = {
   },
 
   // uptime metrics
-  evicted_scripts: {
-    description: "Number of evicted EVAL scripts due to LRU policy.",
-    unit: "",
-  },
   uptime_in_seconds: {
     description: "Number of seconds since Valkey server start.",
     unit: "Unit: Seconds",

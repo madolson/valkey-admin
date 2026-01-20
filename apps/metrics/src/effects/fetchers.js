@@ -1,4 +1,5 @@
 import * as R from "ramda"
+import { InfoOptions } from "@valkey/valkey-glide"
 import { COMMANDLOG_LARGE_REQUEST, COMMANDLOG_SLOW, COMMANDLOG_TYPE, COMMANDLOG_LARGE_REPLY } from "../utils/constants.js"
 import { parseCommandLogs } from "../utils/helpers.js"
 
@@ -27,7 +28,7 @@ export const makeFetcher = (client) => ({
   },
 
   info_cpu: async () => {
-    const raw = await client.info("CPU")
+    const raw = await client.info([InfoOptions.Cpu])
     const ts = Date.now()
 
     return R.pipe(
